@@ -32,7 +32,7 @@
   <project path="system/core" name="android_system_core_mm" groups="pdk" remote="knm" revision="mm2" />
   <project path="vendor/nexus" name="android_vendor_nexus" remote="knm" revision="mm2" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings_mm" remote="knm" revision="mm2" />
-
+  <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller_mm" groups="pdk-fs" remote="knm" revision="mm2" />
 
   <!-- PureNexus Repo's -->
   <project path="art" name="android_art" groups="pdk" remote="pure" revision="mm2" />
@@ -57,11 +57,9 @@
   <project path="packages/apps/LockClock" name="android_packages_apps_LockClock" remote="pure" revision="mm2" />
   <project path="packages/apps/masquerade" name="masquerade" remote="pure" revision="mm2" />
   <project path="packages/apps/MusicFX" name="android_packages_apps_MusicFX" groups="pdk-fs" remote="pure" revision="mm2" />
-  <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" groups="pdk-fs" remote="pure" revision="mm2" />
   <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="pure" revision="mm2" />
   <project path="packages/apps/PureSettings" name="android_packages_apps_PureSettings" remote="pure" revision="mm2" />
   <project path="packages/apps/PureTools" name="android_packages_apps_PureTools" remote="pure" revision="mm2" />
-  <project path="packages/apps/TvSettings" name="android_packages_apps_TvSettings" groups="generic_fs" remote="pure" revision="mm2" />
   <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="pure" revision="mm2" />
   <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="pure" revision="mm2" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="pure" revision="mm2" />
