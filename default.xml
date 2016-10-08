@@ -6,21 +6,37 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com" />
+  <remote  name="knm"
+           fetch="https://github.com/knmurthy" />
   <remote name="pure"
            fetch="https://github.com/PureNexusProject-Legacy/" /> 
-  <default revision="refs/tags/android-6.0.1_r68"
+  <default revision="refs/tags/android-6.0.1_r72"
            remote="aosp"
            sync-c="true"
            sync-j="4" />
 
-  <!-- Pure Repo's -->
-  <project path="build" name="android_build" groups="pdk" remote="pure" revision="mm2" >
+  <!-- KNM Repo's -->
+  <project path="manifest" name="manifest_mm" remote="knm" revision="mm2" />
+  <project path="build" name="android_build_mm" groups="pdk" remote="knm" revision="mm2" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="manifest" name="manifest" remote="pure" revision="mm2" />
+  <project path="frameworks/base" name="android_frameworks_base_mm" groups="pdk-cw-fs,pdk-fs" remote="knm" revision="mm2" />
+  <project path="device/lge/mako" name="device_lge_mako_mm" remote="knm" revision="mm" />
+  <project path="external/sepolicy" name="android_external_sepolicy_mm" groups="pdk" remote="knm" revision="mm2" />
+  <project path="frameworks/av" name="android_frameworks_av_mm" groups="pdk" remote="knm" revision="mm2" />
+  <project path="frameworks/native" name="android_frameworks_native_mm" groups="pdk" remote="knm" revision="mm2" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony_mm" groups="pdk" remote="knm" revision="mm2" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider_mm" groups="pdk-cw-fs" remote="knm" revision="mm2" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider_mm" remote="knm" revision="mm2" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony_mm" remote="knm" revision="mm2" />
+  <project path="system/core" name="android_system_core_mm" groups="pdk" remote="knm" revision="mm2" />
+  <project path="vendor/nexus" name="android_vendor_nexus" remote="knm" revision="mm2" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings_mm" remote="knm" revision="mm2" />
+
+
+  <!-- PureNexus Repo's -->
   <project path="art" name="android_art" groups="pdk" remote="pure" revision="mm2" />
   <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="pure" revision="mm2" />
-  <project path="external/busybox" name="android_external_busybox" remote="pure" revision="mm2" />
   <project path="external/chromium-webview" name="external_chromium-webview" remote="pure" revision="mm2" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" groups="pdk" remote="pure" revision="mm2" />
   <project path="external/exfat" name="android_external_exfat" remote="pure" revision="mm2" />
@@ -28,18 +44,11 @@
   <project path="external/google" name="android_external_google" remote="pure" revision="mm2" />
   <project path="external/guava" name="android_external_guava" groups="pdk-cw-fs,pdk-fs" remote="pure" revision="mm2" />
   <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="pure" revision="mm2" />
-  <project path="external/sepolicy" name="android_external_sepolicy" groups="pdk" remote="pure" revision="mm2" />
   <project path="external/skia" name="android_external_skia" groups="pdk,qcom_msm8x26" remote="pure" revision="mm2" />
-  <project path="frameworks/av" name="android_frameworks_av" groups="pdk" remote="pure" revision="mm2" />
-  <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="pure" revision="mm2" />
-  <project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="pure" revision="mm2" />
   <project path="frameworks/opt/cards" name="android_frameworks_opt_cards" remote="pure" revision="mm2" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="pure" revision="mm2" />
   <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" groups="pdk,broadcom_wlan" remote="pure" revision="mm2" />
   <project path="hardware/marvell/wlan" name="android_hardware_marvell_wlan" remote="pure" revision="mm2" />
   <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="pure" revision="mm2" />
-  <project path="packages/apps/Browser" name="android_packages_apps_Browser" groups="pdk-fs" remote="pure" revision="mm2" />
-  <project path="packages/apps/CellBroadcastReceiver" name="android_packages_apps_CellBroadcastReceiver" remote="pure" revision="mm2" />
   <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" groups="pdk-fs" remote="pure" revision="mm2" />
   <project path="packages/apps/ContactsCommon" name="android_packages_apps_ContactsCommon" groups="pdk-fs" remote="pure" revision="mm2" />
   <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="pure" revision="mm2" />
@@ -53,25 +62,21 @@
   <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="pure" revision="mm2" />
   <project path="packages/apps/PureSettings" name="android_packages_apps_PureSettings" remote="pure" revision="mm2" />
   <project path="packages/apps/PureTools" name="android_packages_apps_PureTools" remote="pure" revision="mm2" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pure" revision="mm2" />
   <project path="packages/apps/TvSettings" name="android_packages_apps_TvSettings" groups="generic_fs" remote="pure" revision="mm2" />
   <project path="packages/inputmethods/LatinIME" name="android_packages_inputmethods_LatinIME" remote="pure" revision="mm2" />
-  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" groups="pdk-cw-fs" remote="pure" revision="mm2" />
   <project path="packages/providers/MediaProvider" name="android_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="pure" revision="mm2" />
-  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="pure" revision="mm2" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="pure" revision="mm2" />
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="pure" revision="mm2" />
   <project path="system/bt" name="android_system_bt" groups="pdk" remote="pure" revision="mm2" />
-  <project path="system/core" name="android_system_core" groups="pdk" remote="pure" revision="mm2" />
   <project path="system/extras" name="android_system_extras" groups="pdk" remote="pure" revision="mm2" />
   <project path="system/vold" name="android_system_vold" groups="pdk" remote="pure" revision="mm2" />
-  <project path="vendor/nexus" name="android_vendor_nexus" remote="pure" revision="mm2" />
 
   <!-- Kernel Source -->
   <project path="kernel/lge/hammerhead" name="android_kernel_lge_hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="pure" revision="mm2" />
-
+  <project path="kernel/lge/mako" name="quanta-mako-mm" remote="knm" revision="mm" />  
+  
   <!-- Proprietary Vendors -->
   <project path="vendor/lge" name="proprietary_vendor_lge" remote="pure" revision="mm2" />
+  <project path="vendor/lge/mako" name="vendor_lge_mako_mm" remote="knm" revision="mm" />
 
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
