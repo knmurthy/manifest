@@ -33,6 +33,7 @@
   <project path="vendor/nexus" name="android_vendor_nexus" remote="knm" revision="mm2" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings_mm" remote="knm" revision="mm2" />
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller_mm" groups="pdk-fs" remote="knm" revision="mm2" />
+  <project path="frameworks/support" name="android_frameworks_support_mm" groups="pdk-cw-fs,pdk-fs" remote="knm" revision="mm2" />
 
   <!-- PureNexus Repo's -->
   <project path="art" name="android_art" groups="pdk" remote="pure" revision="mm2" />
@@ -329,7 +330,6 @@
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
-  <project path="frameworks/support" name="platform/frameworks/support" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/data-binding" name="platform/frameworks/data-binding" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/volley" name="platform/frameworks/volley" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs,pdk-fs" />
