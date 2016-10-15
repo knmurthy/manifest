@@ -70,11 +70,11 @@
 
   <!-- Kernel Source -->
   <project path="kernel/lge/hammerhead" name="android_kernel_lge_hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="pure" revision="mm2" />
-  <project path="kernel/lge/mako" name="quanta-mako-mm" remote="knm" revision="mm" />  
+  <project path="kernel/lge/mako" name="quanta-mako-mm" remote="knm" revision="mm2" />  
   
   <!-- Proprietary Vendors -->
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="pure" revision="mm2" />
-  <project path="vendor/lge/mako" name="vendor_lge_mako_mm" remote="knm" revision="mm" />
+  <project path="vendor/lge/hammerhead" name="android_vendor_lge_hammerhead" remote="knm" revision="mm2" />
+  <project path="vendor/lge/mako" name="vendor_lge_mako_mm" remote="knm" revision="mm2" />
 
   <!-- AOSP Repo's -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
