@@ -69,7 +69,7 @@
   <project path="system/vold" name="android_system_vold" groups="pdk" remote="pure" revision="mm2" />
 
   <!-- Kernel Source -->
-  <project path="kernel/lge/hammerhead" name="android_kernel_lge_hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="pure" revision="mm2" />
+  <project path="kernel/lge/hammerhead" name="kernel_lge_hammerhead_mm" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="knm" revision="mm2" />
   <project path="kernel/lge/mako" name="quanta-mako-mm" remote="knm" revision="mm2" />  
   
   <!-- Proprietary Vendors -->
