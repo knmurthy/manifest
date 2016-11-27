@@ -36,10 +36,10 @@
   <project path="frameworks/support" name="android_frameworks_support_mm" groups="pdk-cw-fs,pdk-fs" remote="knm" revision="mm2" />
   <project path="packages/apps/PureSettings" name="android_packages_apps_PureSettings_mm" remote="knm" revision="mm2" />
   <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth_mm" groups="pdk-cw-fs,pdk-fs" remote="knm" revision="mm2" />
+  <project path="device/lge/hammerhead" name="device_lge_hammerhead_mm" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="knm" revision="mm2" />
 
   <!-- PureNexus Repo's -->
   <project path="art" name="android_art" groups="pdk" remote="pure" revision="mm2" />
-  <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" remote="pure" revision="mm2" />
   <project path="external/chromium-webview" name="external_chromium-webview" remote="pure" revision="mm2" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" groups="pdk" remote="pure" revision="mm2" />
   <project path="external/exfat" name="android_external_exfat" remote="pure" revision="mm2" />
